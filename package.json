@@ -10,7 +10,7 @@
     "build": "nest build && npm run copy-static-assets",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "npm run copy-static-assets && nest start --watch",
+    "dev": "npm run copy-static-assets && nest start --watch",
     "start:debug": "npm run copy-static-assets && nest start --debug --watch",
     "start:prod": "node dist/main",
     "copy-static-assets": "ts-node copyStaticAssets.ts",

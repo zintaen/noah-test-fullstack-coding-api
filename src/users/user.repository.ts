@@ -1,15 +1,17 @@
-
-import { ConflictException, InternalServerErrorException, Logger } from "@nestjs/common";
-import { plainToClass } from "class-transformer";
-import { EntityRepository, Repository } from "typeorm";
-import { UserEntity } from "./user.entity";
-import { RegisterUserDto } from "./dto/register-user.dto";
-import IUser from "./interfaces/user.interface";
-import { MapData } from "../core/decorators/map-data.decorator";
+import {
+  ConflictException,
+  InternalServerErrorException,
+  Logger,
+} from '@nestjs/common';
+import { plainToClass } from 'class-transformer';
+import { EntityRepository, Repository } from 'typeorm';
+import { UserEntity } from './user.entity';
+import { RegisterUserDto } from './dto/register-user.dto';
+import IUser from './interfaces/user.interface';
+import { MapData } from '../core/decorators/map-data.decorator';
 
 @EntityRepository(UserEntity)
 export class UserRepository extends Repository<UserEntity> {
-
   private logger = new Logger(UserRepository.name);
 
   @MapData(IUser)

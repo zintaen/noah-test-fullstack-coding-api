@@ -1,8 +1,7 @@
-
-import { ConnectionOptions } from "typeorm";
+import { ConnectionOptions } from 'typeorm';
 import * as dotenv from 'dotenv';
 import * as fs from 'fs';
-import { OptimisticLockingSubscriber } from "./utils/OptimisticLockingSubscriber";
+import { OptimisticLockingSubscriber } from './utils/OptimisticLockingSubscriber';
 
 const data: any = dotenv.parse(fs.readFileSync(`.env`));
 
@@ -22,9 +21,7 @@ const config: ConnectionOptions = {
   cli: {
     migrationsDir: 'src/migrations',
   },
-  subscribers: [
-    OptimisticLockingSubscriber
-  ]
+  subscribers: [OptimisticLockingSubscriber],
 };
 
 export = config;

@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { BlogsModule } from './blogs/blogs.module';
 import { AppService } from './app.service';
 import * as ormconfig from './ormconfig';
 
@@ -19,6 +20,7 @@ export function DatabaseOrmModule(): DynamicModule {
     ScheduleModule.forRoot(),
     AuthModule,
     UsersModule,
+    BlogsModule,
     HttpModule,
   ],
   providers: [AppService],

@@ -1,10 +1,8 @@
-
-import { Exclude, Expose } from "class-transformer";
-import IBase from "../../core/base.interface";
-import { UserEntity } from "../user.entity";
+import { Exclude, Expose } from 'class-transformer';
+import IBase from '../../core/base.interface';
+import { UserEntity } from '../user.entity';
 
 export class IUser extends IBase implements UserEntity {
-
   @Exclude({ toPlainOnly: true })
   firebaseUid: string;
 
