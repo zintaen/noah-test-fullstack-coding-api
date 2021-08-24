@@ -41,7 +41,7 @@ $ docker-compose up -d
 
 ```bash
 # development
-$ yarn run start
+$ yarn run dev
 
 # watch mode
 $ yarn run start:dev
